@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="description" content="付伟胜 - 全栈开发工程师 / AI应用开发工程师 / 前端开发工程师 个人简历">
+    <title>付伟胜 · 全栈开发工程师简历</title>
+    <!-- 使用简洁的字体方案 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 (免费图标库) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #eef2f5;
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;
+            color: #1e2a3e;
+            line-height: 1.45;
+            padding: 2rem 1rem;
+        }
+
+        /* 主容器：卡片式布局 */
+        .resume-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+
+        /* 网格布局: 左侧深色温和背景，右侧纯白 */
+        .resume-grid {
+            display: grid;
+            grid-template-columns: 34% 66%;
+        }
+
+        /* ========= 左侧样式 (柔和浅灰，层次明晰) ========= */
+        .sidebar {
+            background-color: #f8fafc;
+            border-right: 1px solid #e2edf2;
+            padding: 2rem 1.8rem;
+            height: 100%;
+        }
+
+        .name-title {
+            margin-bottom: 1.8rem;
+            border-bottom: 3px solid #2c7da0;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .name {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0f2b3d;
+            letter-spacing: -0.3px;
+            margin-bottom: 0.4rem;
+        }
+
+        .job-tag {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2c7da0;
+            background: #e1f0f5;
+            display: inline-block;
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            margin-top: 6px;
+        }
+
+        .contact-info {
+            margin: 1.8rem 0 1.5rem 0;
+            background: white;
+            padding: 1rem 1.2rem;
+            border-radius: 24px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+            border: 1px solid #e9edf2;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 0.85rem;
+            color: #2c3e4e;
+            margin-bottom: 0.9rem;
+            word-break: break-all;
+        }
+
+        .contact-item i {
+            width: 22px;
+            color: #2c7da0;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .section {
+            margin: 2rem 0 1.5rem 0;
+        }
+
+        .section-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: -0.2px;
+            color: #0f2b3d;
+            border-left: 4px solid #2c7da0;
+            padding-left: 12px;
+            margin-bottom: 1rem;
+        }
+
+        /* 技能标签组 */
+        .skill-category {
+            margin-bottom: 1.3rem;
+        }
+
+        .skill-cat-title {
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #1f5e7a;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .skill-badge-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-badge {
+            background: white;
+            border: 1px solid #cfdfe8;
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #1e4a62;
+            transition: 0.1s;
+        }
+
+        .soft-skill {
+            background-color: #e6f2f7;
+            border-color: #bddbe8;
+            font-size: 0.75rem;
+            padding: 6px 12px;
+            border-radius: 20px;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .self-eval {
+            background: white;
+            border-radius: 20px;
+            padding: 1rem;
+            border: 1px solid #e2edf2;
+            font-size: 0.85rem;
+            color: #2c3e4e;
+            line-height: 1.5;
+        }
+
+        /* ========= 右侧样式 ========= */
+        .main-content {
+            padding: 2rem 2rem 2rem 2rem;
+            background: white;
+        }
+
+        .right-section {
+            margin-bottom: 2rem;
+        }
+
+        .right-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #0f2b3d;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #e4edf2;
+            padding-bottom: 0.5rem;
+        }
+
+        .right-title i {
+            color: #2c7da0;
+            font-size: 1.2rem;
+        }
+
+        /* 教育卡片 */
+        .edu-header {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 0.4rem;
+        }
+        .edu-major {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        .edu-date {
+            color: #5c7c8c;
+            font-size: 0.8rem;
+        }
+        .school {
+            font-weight: 600;
+            color: #1f5e7a;
+        }
+        .course-list {
+            font-size: 0.8rem;
+            color: #3a5e72;
+            margin: 8px 0 6px;
+            line-height: 1.45;
+        }
+        .gpa {
+            background: #f0f4f9;
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        /* 项目卡片 */
+        .project-item {
+            margin-bottom: 1.8rem;
+            border-bottom: 1px dashed #e9edf2;
+            padding-bottom: 1.4rem;
+        }
+        .project-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 6px;
+        }
+        .project-name {
+            font-weight: 800;
+            font-size: 1rem;
+            color: #1a4b64;
+        }
+        .project-date {
+            font-size: 0.7rem;
+            color: #708e9e;
+            font-weight: 400;
+        }
+        .project-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin: 8px 0 8px;
+        }
+        .tech-stack-item {
+            background: #ecf5f9;
+            font-size: 0.7rem;
+            padding: 2px 10px;
+            border-radius: 16px;
+            color: #1e5e79;
+            font-weight: 500;
+        }
+        .project-desc {
+            font-size: 0.85rem;
+            color: #2c3e4e;
+            margin-top: 6px;
+            padding-left: 0;
+            list-style-position: inside;
+        }
+        .project-desc li {
+            margin-bottom: 5px;
+            line-height: 1.45;
+        }
+
+        .other-item {
+            background: #f9fbfd;
+            padding: 0.6rem 1rem;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            font-size: 0.85rem;
+        }
+
+        .link-box {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+        .link-box a {
+            text-decoration: none;
+            font-size: 0.85rem;
+            color: #2c7da0;
+            font-weight: 500;
+            border: 1px solid #cde3ec;
+            padding: 5px 14px;
+            border-radius: 40px;
+            transition: 0.2s;
+        }
+        .link-box a:hover {
+            background: #2c7da0;
+            color: white;
+            border-color: #2c7da0;
+        }
+
+        hr {
+            margin: 1rem 0;
+            border: none;
+            border-top: 1px solid #e2edf2;
+        }
+
+        /* 响应式 */
+        @media (max-width: 780px) {
+            .resume-grid {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                border-right: 0;
+                border-bottom: 1px solid #e2edf2;
+            }
+            body {
+                padding: 1rem;
+            }
+            .main-content {
+                padding: 1.8rem;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .resume-container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            .sidebar {
+                background: #fafcfd;
+                break-inside: avoid;
+            }
+            .contact-item i {
+                color: black;
+            }
+            .skill-badge {
+                border: 1px solid #aaa;
+                background: #f4f4f4;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+
+        .highlight {
+            font-weight: 600;
+            color: #1e6c8c;
+        }
+        .badge-icon {
+            font-size: 0.7rem;
+            margin-right: 4px;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.7rem;
+            padding: 1rem 0 1.2rem;
+            color: #8aa0ac;
+            border-top: 1px solid #eef2f5;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+<div class="resume-container">
+    <div class="resume-grid">
+        <!-- 左侧栏: 个人信息 + 专业技能 + 自我评价 -->
+        <aside class="sidebar">
+            <div>
+                <div class="name-title">
+                    <div class="name">付伟胜</div>
+                    <div class="job-tag">
+                        <i class="fas fa-code"></i> 全栈 / AI应用 / 前端开发
+                    </div>
+                </div>
+
+                <div class="contact-info">
+                    <div class="contact-item"><i class="fas fa-phone-alt"></i> <span>138 8888 8888</span></div>
+                    <div class="contact-item"><i class="fas fa-envelope"></i> <span>fuweisheng@163.com</span></div>
+                    <div class="contact-item"><i class="fas fa-venus-mars"></i> <span>男 · 24岁</span></div>
+                    <div class="contact-item"><i class="fas fa-map-marker-alt"></i> <span>辽宁·大连</span></div>
+                </div>
+
+                <!-- 专业技能区域 (分类展示) -->
+                <div class="section">
+                    <div class="section-title"><i class="fas fa-cogs"></i> 专业技能</div>
+                    
+                    <div class="skill-category">
+                        <div class="skill-cat-title"><i class="fab fa-html5"></i> 前端栈</div>
+                        <div class="skill-badge-group">
+                            <span class="skill-badge">HTML5/CSS3/JS/TS</span>
+                            <span class="skill-badge">Vue3 + Pinia</span>
+                            <span class="skill-badge">React</span>
+                            <span class="skill-badge">Electron</span>
+                            <span class="skill-badge">Uniapp</span>
+                            <span class="skill-badge">Nuxt</span>
+                            <span class="skill-badge">ECharts/DataV</span>
+                            <span class="skill-badge">G6/D3/Three.js</span>
+                            <span class="skill-badge">Canvas/SVG</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-cat-title"><i class="fas fa-brain"></i> AI与知识库</div>
+                        <div class="skill-badge-group">
+                            <span class="skill-badge">LangChain</span>
+                            <span class="skill-badge">RAG知识库</span>
+                            <span class="skill-badge">CodeBuddy/Trae</span>
+                            <span class="skill-badge">Claude Code</span>
+                            <span class="skill-badge">MCP/Skill</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-cat-title"><i class="fas fa-server"></i> 后端 & 数据库</div>
+                        <div class="skill-badge-group">
+                            <span class="skill-badge">Spring Boot</span>
+                            <span class="skill-badge">MyBatis-Plus</span>
+                            <span class="skill-badge">Koa2/Express</span>
+                            <span class="skill-badge">REST API</span>
+                            <span class="skill-badge">MySQL/Redis</span>
+                            <span class="skill-badge">MySQL Workbench</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-cat-title"><i class="fas fa-mobile-alt"></i> 移动端 & 工程化</div>
+                        <div class="skill-badge-group">
+                            <span class="skill-badge">OpenHarmony(ArkTS)</span>
+                            <span class="skill-badge">Android(Java)</span>
+                            <span class="skill-badge">Git/GitHub</span>
+                            <span class="skill-badge">Docker</span>
+                            <span class="skill-badge">json-server</span>
+                            <span class="skill-badge">全栈部署</span>
+                        </div>
+                    </div>
+
+                    <div class="soft-skill">
+                        <i class="fas fa-rocket"></i> 软实力：极速学习能力 · AI工程化布道 · 跨端可视化实践 · 团队协作
+                    </div>
+                </div>
+
+                <!-- 自我评价 -->
+                <div class="section">
+                    <div class="section-title"><i class="fas fa-user-check"></i> 自我评价</div>
+                    <div class="self-eval">
+                        大连东软科班出身，扎实的全栈功底与AI热情。前端擅长数据大屏与可视化集成 (ECharts/Three.js/G6)，AI方向可基于LangChain快速搭建RAG知识库，后端熟练Spring Boot + Koa2。善于利用AI工具链提效，追求优雅代码与落地价值。拥抱鸿蒙生态，持续探索前沿技术。
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 右侧主要内容: 教育背景 + 项目经历 + 其他实践 + 作品链接 -->
+        <main class="main-content">
+            <!-- 教育背景 -->
+            <div class="right-section">
+                <div class="right-title"><i class="fas fa-graduation-cap"></i> 教育背景</div>
+                <div>
+                    <div class="edu-header">
+                        <span class="edu-major">大连东软信息学院 · 计算机科学与技术 本科</span>
+                        <span class="edu-date">2021.09 – 2025.06</span>
+                    </div>
+                    <div class="course-list">
+                        <i class="fas fa-book-open"></i> 核心课程：数据结构、Java/Python/C语言、数据库、计算机网络、OpenHarmony开发、互联网应用开发技术、高级网页设计、Web架构
+                    </div>
+                    <div>
+                        <span class="gpa"><i class="fas fa-star"></i> GPA: 3.6/4.0 · 专业排名前15%</span>
+                        <span class="gpa" style="margin-left: 8px;"><i class="fas fa-trophy"></i> 校级二等奖学金(22-23) · 三等奖学金(23-24) · 优秀学生干部 · 创新创业先进个人</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 项目经历 (精选4项，完全展示所有技术亮点) -->
+            <div class="right-section">
+                <div class="right-title"><i class="fas fa-laptop-code"></i> 项目经历</div>
+                
+                <!-- 1. 智能知识库问答助手 -->
+                <div class="project-item">
+                    <div class="project-header">
+                        <div class="project-name">📘 智能知识库问答助手 <span style="font-size:0.7rem;">(AI + 全栈)</span></div>
+                        <div class="project-date">2024.09 – 至今</div>
+                    </div>
+                    <div class="project-stack">
+                        <span class="tech-stack-item">LangChain</span><span class="tech-stack-item">Koa2</span><span class="tech-stack-item">MySQL/Redis</span>
+                        <span class="tech-stack-item">Vue3</span><span class="tech-stack-item">G6/Three.js</span><span class="tech-stack-item">json-server</span>
+                    </div>
+                    <ul class="project-desc">
+                        <li>基于LangChain搭建RAG知识库，实现文档上传切片、向量检索，集成LLM提供智能问答；后端Koa2提供API，Redis缓存高频问答提升响应速度。</li>
+                        <li>前端Vue3对话界面 + 可视化亮点：<span class="highlight">G6绘制知识图谱</span>展示文档关联，<span class="highlight">Three.js构建3D节点关系图</span>，直观呈现知识拓扑。</li>
+                        <li>使用json-server模拟早期API原型，加速前后端联调，并通过MCP扩展工具调用能力。</li>
+                    </ul>
+                </div>
+
+                <!-- 2. 智慧校园数据大屏系统 -->
+                <div class="project-item">
+                    <div class="project-header">
+                        <div class="project-name">📊 智慧校园数据大屏系统 <span style="font-size:0.7rem;">(全栈 + 数据可视化)</span></div>
+                        <div class="project-date">2024.07 – 2024.10</div>
+                    </div>
+                    <div class="project-stack">
+                        <span class="tech-stack-item">Spring Boot</span><span class="tech-stack-item">MyBatis-Plus</span><span class="tech-stack-item">Redis</span>
+                        <span class="tech-stack-item">Vue3</span><span class="tech-stack-item">ECharts/DataV</span><span class="tech-stack-item">G6/D3.js</span>
+                    </div>
+                    <ul class="project-desc">
+                        <li>后端Spring Boot + MyBatis-Plus构建数据API，Redis缓存热点数据；<span class="highlight">搭建数据大屏</span>集成多种可视化库：ECharts实时人流量折线图、DataV边框数字翻牌器、G6设备拓扑图、D3.js自定义关系网络图。</li>
+                        <li>MySQL Workbench进行数据库设计，json-server模拟设备数据源完成前端独立开发；最终部署Docker + Nginx展示智慧校园全貌。</li>
+                    </ul>
+                </div>
+
+                <!-- 3. 京东电商仿制 + 小程序版 -->
+                <div class="project-item">
+                    <div class="project-header">
+                        <div class="project-name">🛒 京东电商仿制 · 小程序双端 <span style="font-size:0.7rem;">(跨端 / 可视化)</span></div>
+                        <div class="project-date">2024.02 – 2024.04</div>
+                    </div>
+                    <div class="project-stack">
+                        <span class="tech-stack-item">Vue3+Pinia</span><span class="tech-stack-item">TypeScript</span>
+                        <span class="tech-stack-item">Uniapp</span><span class="tech-stack-item">Canvas/SVG</span><span class="tech-stack-item">Nuxt</span><span class="tech-stack-item">json-server</span>
+                    </div>
+                    <ul class="project-desc">
+                        <li>仿制京东PC/移动端网页，Uniapp跨端打包微信小程序，最大化代码复用；<span class="highlight">Canvas绘制商品热度雷达图</span>，<span class="highlight">SVG实现优惠券进度条动画</span>增强交互。</li>
+                        <li>基于json-server搭建完整mock API，独立完成后端数据模拟，并利用Nuxt进行服务端渲染优化部分页面。</li>
+                    </ul>
+                </div>
+
+                <!-- 4. OpenHarmony智能备忘录 -->
+                <div class="project-item">
+                    <div class="project-header">
+                        <div class="project-name">✍️ OpenHarmony智能备忘录 <span style="font-size:0.7rem;">(鸿蒙原生应用)</span></div>
+                        <div class="project-date">2024.03 – 2024.06</div>
+                    </div>
+                    <div class="project-stack">
+                        <span class="tech-stack-item">OpenHarmony</span><span class="tech-stack-item">ArkTS</span>
+                        <span class="tech-stack-item">Canvas</span><span class="tech-stack-item">DevEco Studio</span>
+                    </div>
+                    <ul class="project-desc">
+                        <li>采用ArkTS声明式开发范式实现备忘录核心功能：增删改查、分类标签及定时提醒机制；集成<span class="highlight">Canvas手写涂鸦</span>，支持手绘示意图。</li>
+                        <li>获得课程优秀设计奖，展现了鸿蒙原生开发能力与图形绘制技术成果。</li>
+                    </ul>
+                </div>
+                <div class="project-item" style="border-bottom: none; padding-bottom: 0;">
+                    <div class="project-desc" style="font-size:0.8rem; color:#2c7da0;"><i class="fas fa-cube"></i> 注：项目涵盖AI工程化、可视化大屏、跨端及鸿蒙生态，体现全栈+AI广度深度。</div>
+                </div>
+            </div>
+
+            <!-- 其他实践与成果 -->
+            <div class="right-section">
+                <div class="right-title"><i class="fas fa-briefcase"></i> 实践与成果</div>
+                <div class="other-item"><i class="fas fa-chalkboard-user"></i> <strong>班级学习委员</strong>：组织编程小组，班级专业课程通过率提升至98%</div>
+                <div class="other-item"><i class="fas fa-lightbulb"></i> <strong>SOVO大学生创业中心成员</strong>：参与项目孵化，组织AI编程讲座，推动AI工程化落地</div>
+                <div class="other-item"><i class="fab fa-github"></i> <strong>个人开源</strong>：GitHub维护“AI-tools”仓库，收录LangChain代码片段、json-server配置模板及MCP示例，获小星星30+</div>
+                <div class="other-item"><i class="fas fa-chart-line"></i> <strong>持续学习之旅</strong>：每周跟进AI工程化/数据可视化前沿，深度关注大屏可视化最佳实践与知识库最新范式</div>
+            </div>
+
+            <!-- 附件/作品链接 -->
+            <div class="right-section">
+                <div class="right-title"><i class="fas fa-link"></i> 作品与链接</div>
+                <div class="link-box">
+                    <a href="#" target="_blank"><i class="fab fa-github"></i> github.com/fuweisheng</a>
+                    <a href="#" target="_blank"><i class="fas fa-chalkboard"></i> 鸿蒙备忘录演示视频</a>
+                    <a href="#" target="_blank"><i class="fas fa-chart-simple"></i> 智慧校园大屏Demo</a>
+                    <a href="#" target="_blank"><i class="fab fa-earlybirds"></i> 知识库助手预览</a>
+                </div>
+                <div style="font-size: 0.75rem; margin-top: 12px; color: #5a7e94;">
+                    <i class="fas fa-code-branch"></i> 仓库包含：RAG问答、大屏源码、电商小程序、json-server mock示例等，欢迎联系交流。
+                </div>
+            </div>
+            <footer>
+                <i class="far fa-file-alt"></i> 付伟胜 · 全栈开发/AI应用方向 · 更新于2025 · 在线简历
+            </footer>
+        </main>
+    </div>
+</div>
+</body>
+</html>
